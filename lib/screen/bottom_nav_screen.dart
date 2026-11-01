@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
 
 import '../const/colors.dart';
-
+import 'first_screen.dart';
 
 int navIndex = 0;
 
 class BottomNavScreen extends StatefulWidget {
   const BottomNavScreen({super.key});
-static const String screenName='/bottom_nav_screen';
+
+  static const String screenName = '/bottom_nav_screen';
+
   @override
   State<BottomNavScreen> createState() => _BottomNavScreenState();
 }
 
 class _BottomNavScreenState extends State<BottomNavScreen> {
   List<Widget> screensList = [
-   // FirstScreen(),
+    FirstScreen(),
     Container(color: Colors.red),
     Container(color: Colors.blue),
     Container(color: Colors.purple),
@@ -49,8 +51,9 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
                   navIndex = 0;
                 });
               },
-              itemBackgroundColor:
-                  navIndex == 0 ? MyColors.primaryColorLight : MyColors.lightColor,
+              itemBackgroundColor: navIndex == 0
+                  ? MyColors.primaryColorLight
+                  : MyColors.lightColor,
             ),
             NavItemWidget(
               icon: Icons.bookmark_border,
@@ -59,8 +62,9 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
                   navIndex = 1;
                 });
               },
-              itemBackgroundColor:
-                  navIndex == 1 ? MyColors.primaryColorLight : MyColors.lightColor,
+              itemBackgroundColor: navIndex == 1
+                  ? MyColors.primaryColorLight
+                  : MyColors.lightColor,
             ),
 
             Expanded(child: SizedBox()),
@@ -72,8 +76,9 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
                   navIndex = 3;
                 });
               },
-              itemBackgroundColor:
-                  navIndex == 3 ? MyColors.primaryColorLight : MyColors.lightColor,
+              itemBackgroundColor: navIndex == 3
+                  ? MyColors.primaryColorLight
+                  : MyColors.lightColor,
             ),
             NavItemWidget(
               icon: Icons.settings_outlined,
@@ -82,8 +87,9 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
                   navIndex = 4;
                 });
               },
-              itemBackgroundColor:
-                  navIndex == 4 ? MyColors.primaryColorLight : MyColors.lightColor,
+              itemBackgroundColor: navIndex == 4
+                  ? MyColors.primaryColorLight
+                  : MyColors.lightColor,
             ),
           ],
         ),
